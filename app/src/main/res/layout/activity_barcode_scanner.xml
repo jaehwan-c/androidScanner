@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".BarcodeScannerActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_bg_heading"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Barcode Scanner"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/barcodeIdentifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/barcode"
+            android:textColor="#808080"
+            android:layout_marginLeft="5dp"
+            android:textSize="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+        <TextView
+            android:id="@+id/decodeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp"
+            android:text="--------------"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barcodeIdentifier" />
+
+        <TextView
+            android:id="@+id/httpResponseIdentifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/http_response"
+            android:textColor="#808080"
+            android:textSize="10dp"
+            app:layout_constraintTop_toBottomOf="@id/decodeValue"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView_http_response"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:ems="10"
+            android:maxHeight="16dp"
+            android:maxLines="1"
+            android:minHeight="16dp"
+            android:text="No Product Name"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintTop_toBottomOf="@id/httpResponseIdentifier"
+            tools:layout_editor_absoluteX="0dp" />
+    
+    <View
+        android:id="@+id/lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/textView_http_response"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/basicIdentifier"
+        android:layout_marginBottom="5dp"
+        />
+
+        <TextView
+            android:id="@+id/basicIdentifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="100dp"
+            android:text="@string/food_information"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDivider" />
+
+        <TextView
+            android:id="@+id/nameIdentifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Name"
+            android:textColor="#808080"
+            android:textSize="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/basicIdentifier" />
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxWidth="100dp"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameIdentifier" />
+
+        <TextView
+            android:id="@+id/ingredientIdentifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Ingredients"
+            android:textColor="#808080"
+            android:textSize="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+        <TextView
+            android:id="@+id/ingredientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:maxWidth="120dp"
+            android:text="Ingredients"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:maxLines="10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredientIdentifier" />
+
+        <TextView
+            android:id="@+id/nutrientsIdentifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Nutrients"
+            android:textColor="#808080"
+            android:textSize="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredientName" />
+
+        <TextView
+            android:id="@+id/nutrientsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Nutrients"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nutrientsIdentifier"
+            android:maxLines="5"/>
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="250dp"
+            android:layout_height="360dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/basicIdentifier"
+            app:srcCompat="@drawable/sample_image"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="278dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
